@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+  }
+
+body {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navegacion{
+    position: fixed;
+    top: 1rem;
+    width: 100%;
+    background-color: #b9cceb;
+    z-index: 1000;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.navegacion__contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    
+}
+
+.navegacion__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacion__menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seccion Nosotros */
+
+main {
+    position: relative;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.nosotros__imagen {
+    max-width: 100%;
+    height: auto;
+}
+
+.nosotros__fondo {
+    position: absolute;
+    width: 150%;
+    height: 500px;
+    background-color: #d9d9d9;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    z-index: -1000;
+}
+
+.nosotros__texto{
+    text-align: left;
+}
+
+.nosotros__contenedor, .noticias__contenedor {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nosotros__titulo, .noticias__titulo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+}
+
+.noticias__tarjetas {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .noticias__tarjeta {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+.noticias__tarjeta div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.puntuacion {
+    padding: 0 2rem;
+    padding-top: 3rem;
+}
+
+.puntuacion__titulo {
+    text-transform: uppercase;
+    color: #102f76;
+    font-weight: 500;
+}
+
+.puntuacion__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.puntuacion__contenedor_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.estrella {
+    font-size: 2rem;
+}
+
+.puntuacion__contenedor_left div:first-child {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.puntuacion__contenedor_left div:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.span1 {
+    font-size: 8rem;
+}
+
+.span2 {
+    font-size: 4rem;
+}
+
+.span3 {
+    font-size: 4rem;
+}
+
+.puntuacion-total{
+    color: #102f76;
+    font-size: 1rem;
+}
+
+.puntuacion__contenedor_right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.barra-puntuacion {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .barra-fondo {
+    background-color: #e0e0e0;
+    height: 14px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .barra-verde {
+    background-color: #2ecc71;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .barra-numero {
+    font-size: 1rem;
+    min-width: 60px;
+    text-align: left;
+  }
+
+  .comentarios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 3rem 1rem;
+      gap: 2rem;
+  }
+
+  .comentarios span {
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+
+  .comentarios i {
+      font-size: 1rem;
+  }
+
+  .comentarios__tarejta_cabecera{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  footer {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      gap: 1.5rem;
+      padding: 1rem 0;
+  }
+
+  footer .redes {
+      display: flex;
+      gap: 2rem;
+
+  }
+
+  footer i {
+      color: white;
+      font-size: 2rem;
+  }
+
+
+@media (max-width: 1050px) {
+    .nosotros__fondo {
+        top: -6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nosotros__fondo {
+        top: -9rem;
+    }
+
+    .comentarios {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .nosotros__fondo {
+        top: -12rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nosotros__fondo {
+        top: -17rem;
+    }
+}
