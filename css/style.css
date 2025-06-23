@@ -33,6 +33,14 @@ header a {
     font-size: 1.5rem;
 }
 
+.menu-toggle, .menu-icon{
+    display: none;
+}
+
+.menu-icon:hover{
+    cursor: pointer;
+}
+
 .navegacion__contenedor {
     display: flex;
     justify-content: space-between;
@@ -268,8 +276,46 @@ section {
 }
 
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
     .nosotros__fondo {
         top: -9rem;
+    }
+
+    .menu-toggle:checked ~ .navegacion__menu {
+        display: block;
+    }
+
+    .navegacion__menu {
+        display: none;
+        width: 100%;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navegacion__menu ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navegacion__menu ul li {
+        width: 100%;
+    }
+
+    .navegacion__menu ul li a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        padding: 10px 0;
+    }
+
+    .navegacion__menu ul li:hover{
+        background-color: #a7a7a7;
     }
 
     .comentarios {
