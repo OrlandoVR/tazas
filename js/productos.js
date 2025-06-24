@@ -7,7 +7,7 @@ fetch(`${jsonBase}json/productos.json`)
       data.forEach(producto => {
           contenedor.innerHTML += `
               <div>
-                  <img src="${producto.imagen}" alt="producto${producto.id}">
+                  <img src="image/${producto.imagen}" alt="producto${producto.id}">
                   <div>
                       <p>${producto.nombre}</p>
                       <span>Codigo ${producto.id}</span>
