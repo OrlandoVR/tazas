@@ -1,9 +1,10 @@
 const contenedor = document.getElementById("contenedor__productos");
 console.log(contenedor);
 
-fetch("json/productos.json")
+fetch("/json/productos.json")
     .then(res => res.json())
     .then(data => {
+        console.log("aaa");
         data.forEach(producto => {
             contenedor.innerHTML += `
             <div>
