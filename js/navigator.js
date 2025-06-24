@@ -1,6 +1,7 @@
+const navBase = location.pathname.includes("/html/") ? "../" : "";
 
-fetch("./html/navigator.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
-    })
+fetch(`${navBase}html/navigator.html`)
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+  });
