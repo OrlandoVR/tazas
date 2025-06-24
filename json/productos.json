@@ -2,31 +2,31 @@
     {
       "id": 1,
       "nombre": "Taza Buen Café",
-      "imagen": "image/producto1.jpg",
+      "imagen": "/tazas/image/producto1.jpg",
       "descripcion": "Taza clásica para los verdaderos amantes del buen café."
     },
     {
       "id": 2,
       "nombre": "Taza Best Boss Ever",
-      "imagen": "image/producto2.jpg",
+      "imagen": "/tazas/image/producto2.jpg",
       "descripcion": "El regalo ideal para ese jefe o jefa que se lo merece."
     },
     {
       "id": 3,
       "nombre": "Taza Morning Pumpkin",
-      "imagen": "image/producto3.jpg",
+      "imagen": "/tazas/image/producto3.jpg",
       "descripcion": "Dale un toque otoñal y tierno a tus mañanas."
     },
     {
       "id": 4,
       "nombre": "Taza Coffee and Sunshine",
-      "imagen": "image/producto4.jpg",
+      "imagen": "/tazas/image/producto4.jpg",
       "descripcion": "Perfecta para café, flores o una dosis doble de energía."
     },
     {
       "id": 5,
       "nombre": "Taza Corazón Rojo",
-      "imagen": "image/producto5.jpg",
+      "imagen": "/tazas/image/producto5.jpg",
       "descripcion": "Romántica y dulce, ideal para regalar con amor."
     }
   ]
