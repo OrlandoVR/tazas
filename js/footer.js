@@ -1,7 +1,19 @@
-const footerBase = location.pathname.includes("/html/") ? "../" : "";
+document.addEventListener("DOMContentLoaded", () => {
 
-fetch(`${footerBase}html/footer.html`)
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer-placeholder").innerHTML = data;
-  });
+  const footerEl = document.getElementById("footer-placeholder");
+
+  let footerPath = "partials/footer.html";
+  if (window.location.pathname.includes("/pages/")) {
+    footerPath = "../partials/footer.html";
+  }
+
+  fetch(footerPath)
+    .then(res => res.text())
+    .then(html => {
+      footerEl.innerHTML = html;
+    })
+    .catch(err => {
+      console.error("Error cargando footer:", err);
+    });
+
+});
