@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Contacto</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+    <style>
+        :root {
+            --brand: #0b009e;
+        }
+
+        body {
+            font-family: system-ui, Arial, sans-serif;
+            margin: 0;
+            color: #222;
+        }
+
+        header {
+            border-bottom: 1px solid #eee;
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+            padding: 16px 20px;
+        }
+
+        .card {
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+        }
+
+        .brand {
+            color: var(--brand);
+            font-weight: 700;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .btn {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border-color: #bbb;
+        }
+
+        .btn-primary {
+            background: var(--brand);
+            color: #fff;
+            border-color: var(--brand);
+        }
+
+        .map-wrap {
+            width: 100%;
+        }
+
+        #map {
+            width: 100%;
+            height: clamp(360px, 55vh, 640px);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        /* Pin sencillo verde */
+        .custom-pin {
+            width: 22px;
+            height: 22px;
+            background: var(--brand);
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+            position: relative
+        }
+
+        .custom-pin::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-top-color: var(--brand)
+        }
+
+        .leaflet-popup-content-wrapper,
+        .leaflet-popup-tip {
+            border-radius: 10px;
+        }
+
+        footer {
+            padding: 16px 20px;
+            color: #666;
+            font-size: .9rem
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="nav-placeholder"></nav><br><br><br><br>
+        <h1 class="brand">Tazaszas</h1>
+        <div>Polígono Las Mercedes – <strong>C. Laguardia, 4, 28022 Madrid</strong> · Tel: <a
+                href="tel:+34914906600">914 90 66 00</a></div>
+        <div>Horario: Lun–Vie 07:30–22:00 · Sáb 09:00–22:00 · Dom 10:00–22:00</div>
+    </header>
+
+    <section class="grid">
+        <div class="card">
+            <h2>Cómo llegar</h2>
+            <p>Usa el botón para calcular la ruta desde tu ubicación actual hasta nuestra tienda.</p>
+            <div class="actions">
+                <button id="btn-ruta" class="btn btn-primary">📍 Calcular ruta desde mi ubicación</button>
+                <button id="btn-reset" class="btn">↺ Reiniciar vista</button>
+            </div>
+        </div>
+
+        <div class="card map-wrap">
+            <div id="map"></div>
+        </div>
+    </section>
+    
+    <footer id="footer-placeholder"></footer>
+    
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+    
+    <script src="./../js/footer.js"></script>
+    <script src="./../js/navigator.js"></script>
+    <script src="./../js/contacto.js"></script>
+</body>
+
+</html>
