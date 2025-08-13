@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <ul id="lista-opciones">
             <li><a href="${basePath}index.html">Inicio</a></li>
             <li><a href="${basePath}pages/productos.html">Productos</a></li>
-            <li><a href="#">Presupuesto</a></li>
+            <li><a href="${basePath}pages/presupuesto.html">Presupuesto</a></li>
             <li><a href="#">Contacto</a></li>
             </ul>
         </div>

@@ -5,7 +5,12 @@
 }
 html, body {
     overflow-x: hidden;
-  }
+}
+
+input:not([type="checkbox"]) {
+
+    width: 100%;
+}
 
 body {
     position: relative;
@@ -389,3 +394,30 @@ section {
     }
 }
 
+
+/* PAGINA DE PRESUPUESTO */
+
+.main-presupuesto h1{
+    text-align: center;
+}
+
+.main-presupuesto{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.contenedor__presupuesto {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor__presupuesto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.error-alerta {
+    color: red;
+}
