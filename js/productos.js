@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // pinta los cards; sólo guarda el id en data-id
             const cardsHtml = data.map(p => `
         <div class="card h-100 shadow-sm producto" data-id="${p.id}" style="cursor:pointer">
-          <img src="../../images/${p.imagen}" class="card-img-top" alt="producto ${p.id}">
+          <img src="../images/${p.imagen}" class="card-img-top" alt="producto ${p.id}">
           <div class="card-body">
             <h5 class="card-title mb-1">${p.nombre}</h5>
             <small class="text-muted">Código ${p.id}</small>
