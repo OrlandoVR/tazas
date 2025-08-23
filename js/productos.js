@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modalEl.querySelector(".modal-title").textContent = p.nombre;
 
         const imgEl = modalEl.querySelector('[data-role="modal-img"]');
-        imgEl.src = `../../images/${p.imagen}`;
+        imgEl.src = `../images/${p.imagen}`;
         imgEl.alt = `producto ${p.id}`;
 
         modalEl.querySelector('[data-role="modal-desc"]').textContent = p.descripcion;
