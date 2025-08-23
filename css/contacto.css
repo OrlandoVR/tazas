@@ -1,0 +1,101 @@
+:root {
+    --brand: #0b009e;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    margin: 0;
+    color: #222;
+}
+
+header {
+    border-bottom: 1px solid #eee;
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+    padding: 16px 20px;
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+}
+
+.brand {
+    color: var(--brand);
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.btn {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: #bbb;
+}
+
+.btn-primary {
+    background: var(--brand);
+    color: #fff;
+    border-color: var(--brand);
+}
+
+.map-wrap {
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: clamp(360px, 55vh, 640px);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Pin sencillo verde */
+.custom-pin {
+    width: 22px;
+    height: 22px;
+    background: var(--brand);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+    position: relative
+}
+
+.custom-pin::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: var(--brand)
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    border-radius: 10px;
+}
+
+footer {
+    padding: 16px 20px;
+    color: #666;
+    font-size: .9rem
+}

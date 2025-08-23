@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Productos</title>
 </head>
+
 <body>
     <header>
         <nav id="nav-placeholder"></nav>
@@ -20,13 +22,31 @@
         <div class="contenedor__productos" id="contenedor__productos">
 
         </div>
-        
+
     </main>
-    
+
     <footer id="footer-placeholder"></footer>
 
+
+    <div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="productoModalLabel">...</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img data-role="modal-img" class="img-fluid rounded mb-3" alt="imagen modelo" src="#">
+                    <p data-role="modal-desc" class="mb-0"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./../js/footer.js"></script>
     <script src="./../js/navigator.js"></script>
     <script src="./../js/productos.js"></script>
 </body>
+
 </html>

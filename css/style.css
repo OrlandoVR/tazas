@@ -230,9 +230,13 @@ section {
   }
 
   .comentarios {
+    margin-top: 2rem;
+  }
+
+  .comentarios-contenedor {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      padding: 3rem 1rem;
+      padding: 1rem 1rem;
       gap: 2rem;
   }
 
@@ -250,6 +254,18 @@ section {
       align-items: center;
       gap: 0.5rem;
   }
+
+  @media (max-width: 900px) {
+    .comentarios-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .comentarios-contenedor {
+        grid-template-columns: 1fr;
+    }
+}
 
   footer {
       background-color: black;
@@ -422,5 +438,10 @@ section {
     color: red;
 }
 
-/* Pagina Contacto */
+/* Navegacion */
 
+.navegacion__menu a.active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
